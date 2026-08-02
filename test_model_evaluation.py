@@ -15,7 +15,7 @@ import mlflow.sklearn
 
 mlflow.set_tracking_uri("http://136.64.73.131:8100")
 
-DATA_PATH = "./data/iris_test.csv"
+DATA_PATH = "./data/test.csv"
 
 
 def get_trained_model():
