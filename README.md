@@ -20,11 +20,11 @@ Using minute-level and historical data, predict at every minute whether a partic
 
 ## Objectives
 
-* Instrument a training loop with MLflow to log hyperparameters, evaluation metrics, and model artifacts.
-* Compare experiments visually using the MLflow Tracking UI.
-* Register and version models in the MLflow Model Registry.
-* Modify downstream pipelines (evaluation, inference) to fetch models from the registry instead of DVC.
-* Understand how experiment tracking complements data versioning in an ML workflow.
+* Data Versioning with DVC
+* Feast Feature Store Integration
+* Training & Evaluation
+* Hyperparameter Tuning & Experiment Tracking with MLflow
+* CI on Main Branch with CML Report Generation
 
 ## Included Files
 * graded_assignment.py - Load data, splits the data to train and test, builds the model using train data, upload the model to mlflow model registry, validates the model using test data
@@ -112,16 +112,16 @@ assertion.repository in [
 
 ## Feast
 * Create feast store
-```feast init iris-feature-store```
+```feast init feast_repo```
 * Generate a feature file
-* Modify iris-feature-store/feature_repo configuration files
+* Modify feast_repo/feature_repo configuration files
 ```
 feature_definitions.py
 feature_store.yaml
 ```
 * Run 
 ```
-cd ./data/iris-feature-store/feature_repo
+cd ./data/feast_repo/feature_repo
 feast apply
 ```
 * Train model on historical feast feature store data
