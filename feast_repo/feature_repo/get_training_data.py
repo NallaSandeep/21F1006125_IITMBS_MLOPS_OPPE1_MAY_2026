@@ -7,7 +7,10 @@ repo_path = Path(__file__).parent
 raw_data = pd.read_csv(repo_path.parent.parent / "data" / "train.csv")
 raw_data["timestamp"] = pd.to_datetime(raw_data["timestamp"], utc=True)
 
-entity_df = raw_data[["stock_name", "timestamp", "target"]]
+entity_df = raw_data[["stock_name", "timestamp", "target"]].sample(
+    n=1000,
+    random_state=42,
+)
 
 store = FeatureStore(repo_path=str(repo_path))
 training_df = store.get_historical_features(
