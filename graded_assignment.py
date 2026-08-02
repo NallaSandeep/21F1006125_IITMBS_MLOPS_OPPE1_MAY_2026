@@ -54,7 +54,7 @@ def train_model_log_mlflow(X_train, y_train, X_test, y_test):
     mlflow.set_experiment("stock_price_direction_experiment")
 
     with mlflow.start_run():
-        params = {"max_depth": 3, "random_state": 1, "min_samples_split": 2}
+        params = {"max_depth": 4, "random_state": 1, "min_samples_split": 3}
         model = DecisionTreeClassifier(**params)
         model.fit(X_train, y_train)
 
