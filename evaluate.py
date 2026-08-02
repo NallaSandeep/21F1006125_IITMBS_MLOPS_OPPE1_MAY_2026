@@ -17,7 +17,7 @@ _, X_test, _, y_test = split_data(data)
 mlflow.set_tracking_uri("http://136.64.73.131:8100")
 
 inference_model = mlflow.sklearn.load_model(
-    model_uri="models:/IrisDecisionTree/latest"
+    model_uri="models:/StockDirectionDecisionTree/latest"
 )
 predictions = inference_model.predict(X_test)
 
