@@ -105,10 +105,3 @@
   source to Parquet for Feast.
 - `feast_repo/feature_repo/get_training_data.py`: Requests historical,
   point-in-time correct feature values.
-
-## Limitations Encountered
-
-The full Feast historical retrieval was terminated by the Workbench environment
-(`Killed`), indicating insufficient memory for the full source/query join. The
-recommended reduced-size retrieval preserves the point-in-time retrieval method
-for demonstration purposes.
