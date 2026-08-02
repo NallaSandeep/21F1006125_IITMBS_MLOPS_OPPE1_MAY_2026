@@ -1,4 +1,4 @@
-# Integrating MLflow into the IRIS Pipeline
+# OPPE1
 
 ## Overview
 
@@ -63,6 +63,10 @@ Add experiment tracking and a model registry to IRIS pipeline using MLflow — l
 * git config --global user.email "21f1006125@ds.study.iitm.ac.in"
 * git config --global user.name "21f1006125"
 
+## Storage Bucket
+* Create a new bucket
+```gcloud storage buckets create gs://mlops_course_oppe1```
+
 ## GCP
 * From Google console, configure workload identify federal pool (ie., github pool)
 * Create a github provider (https://iam.googleapis.com/projects/434534994925/locations/global/workloadIdentityPools/github-pool/providers/github)
@@ -85,7 +89,7 @@ assertion.repository in [
 ## DVC
 * Run 'dvc init'
 * Run 'dvc remote list'
-* Run 'dvc remote add -d storage gs://mlops-course-project-eada5958-ab21-4f76-b53-graded-assignments'
+* Run 'dvc remote add -d storage gs://mlops_course_oppe1'
 * Create DVC pipeline dvc stage add -n train -d graded_assignment.py -d data/iris.csv -o artifacts/model.joblib -o artifacts/predictions.csv python graded_assignment.py
 * Run 'dvc config core.autostage true'
 * Run 'dvc pull' to pull corresponding versioned data
