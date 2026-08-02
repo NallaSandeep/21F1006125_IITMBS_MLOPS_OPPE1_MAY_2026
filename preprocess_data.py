@@ -3,7 +3,7 @@ import numpy as np
 
 
 # Load data from file (for demonstration)
-df = pd.read_csv("./AARTIIND__EQ__NSE__NSE__MINUTE.csv")
+df = pd.read_csv("./data/v0/AARTIIND__EQ__NSE__NSE__MINUTE.csv")
 
 # For loading from file, use:
 # df = pd.read_csv('your_data.csv')

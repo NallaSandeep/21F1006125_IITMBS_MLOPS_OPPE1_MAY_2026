@@ -78,7 +78,7 @@ def train_model_log_mlflow(X_train, y_train, X_test, y_test):
 
 
 def main():
-    data = load_data("./data/iris.csv")
+    data = load_data("./data/train.csv")
 
     X_train, X_test, y_train, y_test = split_data(data)
 
