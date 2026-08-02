@@ -2,7 +2,21 @@
 
 ## Overview
 
-Add experiment tracking and a model registry to IRIS pipeline using MLflow — logging hyperparameters, evaluation metrics, and trained models so we can compare experiments and serve the best model from a central registry.
+Build a stock movement predictor with end-to-end MLOps tooling (DVC, Feast, MLflow, and CI with CML) on Google Cloud Platform.
+
+## Problem Description
+Being an MLOps engineer in an investment firm, my task is to build a predictor for stock movements in the next 5 minutes.
+
+Using minute-level and historical data, predict at every minute whether a particular stock will trade up or down 5 minutes later.
+
+### Target and Training Details
+* Predict 1 if the stock will close 5 minutes later at a price higher than the current price, and 0 otherwise.
+* Use the past 10 minutes of data to predict the outcome 5 minutes into the future.
+* Create the prediction/target column for the entire dataset based on actual stock price values. Use this as the ground truth for training and testing.
+* Train the predictor in two iterations:
+  * Iteration 1: Use v0 data only.
+  * Iteration 2: Use the merged data of v0 and v1.
+* If data is missing, process the last 10 available data points.
 
 ## Objectives
 
