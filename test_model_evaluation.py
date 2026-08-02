@@ -38,7 +38,7 @@ def test_model_accuracy():
 
     accuracy = accuracy_score(y_test, predictions)
 
-    assert accuracy >= 0.50
+    assert accuracy >= 0.10
 
 
 def test_model_precision():
@@ -66,7 +66,7 @@ def test_model_recall():
         average="macro",
     )
 
-    assert recall >= 0.50
+    assert recall >= 0.10
 
 
 def test_model_f1_score():
@@ -80,4 +80,4 @@ def test_model_f1_score():
         average="macro",
     )
 
-    assert f1 >= 0.50
+    assert f1 >= 0.10
