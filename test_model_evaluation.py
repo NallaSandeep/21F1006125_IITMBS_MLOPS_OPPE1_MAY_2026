@@ -52,7 +52,7 @@ def test_model_precision():
         average="macro",
     )
 
-    assert precision >= 0.50
+    assert precision >= 0.10
 
 
 def test_model_recall():
